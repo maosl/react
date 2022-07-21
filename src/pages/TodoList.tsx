@@ -1,4 +1,3 @@
-
 import React from "react";
 
 
@@ -6,8 +5,11 @@ interface  IState{
     inputValue:string
     list:string[]
 }
+interface IPros{
+    id:string
+}
 
-export default class TodoList extends React.Component<any,IState>{
+export default class TodoList extends React.Component<IPros,IState>{
    
     constructor(props:any){
         super(props);
@@ -19,14 +21,14 @@ export default class TodoList extends React.Component<any,IState>{
 
     render(){
         return (<div>
-        <div>
-                <label htmlFor="insertArea">输入内容</label>
-                <input id="inertArea"
-                        className="input"
-                        value={this.state.inputValue}
-                />
-                <button >提交</button>
-            </div>
+            {/* <div>
+                    <label htmlFor="insertArea">输入内容</label>
+                    <input id="inertArea"
+                            className="input"
+                            value={this.state.inputValue}
+                    />
+                    <button >提交</button>
+            </div> */}
         </div>)
     }
 }
