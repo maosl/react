@@ -1,42 +1,22 @@
 
-import React, { ChangeEvent }  from "react";
+import React from "react";
 
-interface Iprops{
-    
-}
+
 interface  IState{
     inputValue:string
     list:string[]
 }
 
-export class TodoList extends React.Component<Iprops,IState>{
+export default class TodoList extends React.Component<any,IState>{
    
-    constructor(props:Iprops){
+    constructor(props:any){
         super(props);
-       
         this.state ={
             inputValue:'',
             list:[]
-        
         } 
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleBtnClick = this.handleBtnClick.bind(this);
-        this.handleItemDelete = this.handleItemDelete.bind(this);
     }
 
-    handleInputChange = (event: ChangeEvent<HTMLInputElement>):void =>{
-
-    } 
-
-    handleBtnClick = (e:any) =>{
-    }
-    handleItemDelete = (e:EventTarget) =>{
-
-    }
-   
-    componentDidMount(){
-
-    }
     render(){
         return (<div>
         <div>
@@ -44,9 +24,8 @@ export class TodoList extends React.Component<Iprops,IState>{
                 <input id="inertArea"
                         className="input"
                         value={this.state.inputValue}
-                        onChange={this.handleInputChange}
                 />
-                <button onClick={this.handleBtnClick} >提交</button>
+                <button >提交</button>
             </div>
         </div>)
     }
